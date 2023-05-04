@@ -1,0 +1,16 @@
+#To generate a multiplication table within 20
+
+num = int(input("What multiplication table you want? "))
+mx = [(x+1) * num for x in range(20)] # list comprehension,mx = [x * num for x in range(20)],to remove 0 from list, use x+1. 
+
+#mx2 = [str(x) +' x '+str(num) for x in range(20)] 
+# i.e if 4 is user input,range from 0, ['0 x 4', '1 x 4', '2 x 4',str gives string format.
+mx2 = [str(x+1) + " x " +str(num)+ " = " + str((x+1)*num) for x in range(20)] 
+
+# to use f expression
+mx3 = [f'{x+1} x {num} = {(x+1)*num}' for x in range(20)]
+
+print(mx)
+print(mx2)
+print(mx3)
+

@@ -1,0 +1,27 @@
+from datetime import date
+import csv
+
+dt = date.today()
+dt = dt.strftime("%d/%m/%Y") #format date 
+
+filename = "test.csv"     #naming csv file 
+exp = []                  #taking an empty list
+stopped = False
+
+with open(filename,'a',newline="") as file:  #write mode will not store previous data but append mode will store,newline is removed.
+    csvwriter = csv.writer(file)            # use csv writer,a tool to write data in csv file.
+    while not stopped:
+        xp = int(input("What is the expense(type 0 to stop): "))
+        if xp == 0:
+           stopped = True
+        else:
+           csvwriter.writerow([dt,xp]) # store date as list,not as string
+           
+           exp.append(xp)
+file.close()    
+print("your expenses today are, ", exp)
+print("Your total is", sum(exp))
+
+
+
+
