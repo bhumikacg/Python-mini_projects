@@ -4,3 +4,4 @@
       
 **2.Expense tracker** - Whenever we run this tracker program it will ask you for a list of expenses and keep collecting inputs until you type zero. All expenses are saved in a CSV file. It will also time-stamp the data. 
 
+**3.Assignment** - Utilized Python data structures, functions, and aggregate functions to solve the assignment. 
